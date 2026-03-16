@@ -6,13 +6,11 @@ from langchain_core.tools import tool
 
 PROJECT_ROOT = pathlib.Path.cwd() / "generated_project"
 
-
 def safe_path_for_project(path: str) -> pathlib.Path:
     p = (PROJECT_ROOT / path).resolve()
     if PROJECT_ROOT.resolve() not in p.parents and PROJECT_ROOT.resolve() != p.parent and PROJECT_ROOT.resolve() != p:
         raise ValueError("Attempt to write outside project root")
     return p
-
 
 @tool
 def write_file(path: str, content: str) -> str:
@@ -23,7 +21,6 @@ def write_file(path: str, content: str) -> str:
         f.write(content)
     return f"WROTE:{p}"
 
-
 @tool
 def read_file(path: str) -> str:
     """Reads content from a file at the specified path within the project root."""
@@ -33,12 +30,10 @@ def read_file(path: str) -> str:
     with open(p, "r", encoding="utf-8") as f:
         return f.read()
 
-
 @tool
 def get_current_directory() -> str:
     """Returns the current working directory."""
     return str(PROJECT_ROOT)
-
 
 @tool
 def list_files(directory: str = ".") -> str:

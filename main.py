@@ -4,7 +4,6 @@ import traceback
 
 from agent.graph import agent
 
-
 def main():
     parser = argparse.ArgumentParser(description="Run engineering project planner")
     parser.add_argument("--recursion-limit", "-r", type=int, default=100,
