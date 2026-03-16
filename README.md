@@ -38,4 +38,3 @@ Now that we are done with all the set-up & installation steps we can start the a
 - Create a simple blog API in FastAPI with a SQLite database.
 
 ---
-Copyright©️ Codebasics Inc. All rights reserved.
