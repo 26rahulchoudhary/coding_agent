@@ -213,7 +213,7 @@ Contributions welcome! To contribute:
 
 ## 👥 About
 
-Developed by **Codebasics Inc.** – Demonstrating the power of multi-agent AI systems for software development.
+Demonstrating the power of multi-agent AI systems for software development.
 
 **Questions?** Open an issue on GitHub or contact support.
 
